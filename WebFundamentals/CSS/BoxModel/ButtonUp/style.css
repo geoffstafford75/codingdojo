@@ -1,0 +1,36 @@
+#container{
+    margin: 55px;
+}
+
+div{
+    padding: 5px;
+}
+
+#search{
+    border-radius: 15px;
+    background-color: aliceblue;
+    border:2px solid darkturquoise;
+    color:darkturquoise;
+    font-size: 15px;
+    font-weight: bold;
+    padding: 4px 45px
+}
+
+#plus{
+    border-radius: 50%;
+    border:2px solid darkturquoise;
+    background-color:darkturquoise;
+    color: white;
+    font-size: 25px;
+    padding: 3px 10px;
+}
+
+#createAccount{
+    color: white;
+    border-color: black;
+    background-color:royalblue;
+    box-shadow: 4px 4px black;
+    font-size: 15px;
+    padding: 6px 30px
+}
+
