@@ -1,0 +1,14 @@
+.container {
+    width: 720px;
+    height: 250px;
+    background-color: silver;
+    display: flex;
+}
+.col {
+    width: 220px;
+    height: 150px;
+    padding: 10px;
+    background-color: blanchedalmond;
+    display: inline-block;
+    vertical-align: center;
+}
