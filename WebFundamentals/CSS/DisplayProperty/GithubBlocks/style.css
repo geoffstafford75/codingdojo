@@ -1,5 +1,4 @@
 
-
 .container {
     width: 800px;
     background-color:rgb(230, 228, 228);
@@ -7,14 +6,13 @@
     padding:20px;
     padding-bottom: 20px;
     font-family: sans-serif;
+    text-align: center;
+    color: darkslategray;
 }
 
 h1 { 
     font-size: 40px;
     font-weight: 500;
-    font-stretch:ultra-expanded;
-    color: darkslategray;
-    text-align: center;
     margin-top: 0px;
     margin-bottom: 20px;
 }
@@ -23,35 +21,28 @@ img.octocat {
     height: 200px;
 }
 
-.row1 {
+.row {
+    display: flex;
+    padding: 20px;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+
+.salmon {
     background-color: lightsalmon;
-    display: flex;
-    padding: 20px;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    margin-bottom: 20px;
 }
 
-.row2 {
+.yellow {
     background-color: lightyellow;
-    display: flex;
-    padding: 20px;
     justify-content: space-evenly;
-    flex-wrap: wrap;
-    margin-bottom: 20px;
 }
 
-.row3 {
+.blue {
     background-color: lightsteelblue;
-    display: flex;
-    padding: 20px;
-    justify-content: space-between;
-    flex-wrap: wrap;
 }
 
 h3.footer {
-    color: darkslategray;
-    text-align: center;
     font-weight: 100;
     margin-bottom: 0px;
 }
