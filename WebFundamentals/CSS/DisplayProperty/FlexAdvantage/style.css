@@ -3,6 +3,8 @@
     height: 250px;
     background-color: silver;
     display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 .col {
     width: 220px;
