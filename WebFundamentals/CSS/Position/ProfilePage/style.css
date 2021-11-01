@@ -1,0 +1,194 @@
+* {
+    margin: 0px;
+    padding: 0px;
+
+}
+
+body {
+    font-family: Roboto, sans-serif;
+    background-color:rgb(240, 234, 234);
+    font-size: 1.2em;
+}
+
+.container {
+    max-width:1000px;
+    display:flex;
+    align-items: flex-start;
+    background-color: snow;
+    margin:auto;
+}
+
+.container-left{
+    flex: 2;
+}
+
+.card-details {
+    padding: 20px 40px;
+}
+
+.profile-nav {
+    height: 10px;
+    background-color:teal;
+    padding:100px 50px;
+    margin-bottom: 150px;
+}
+
+.profile-pic {
+    border: 2px solid black;
+    background-color: white;
+    border-radius: 50%;
+    padding: 5px; 
+}
+
+.profile {
+    margin: 20px 0px 20px 20px;
+    border: 4px solid slategray;
+    border-radius: 5px;
+
+}
+
+.nav-container {
+    background-color: black;
+    color: white;
+    display: flex;
+    align-items:flex-end;
+}
+
+.nav {
+    width: 1000px;
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: auto;
+}
+
+.nav-left {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-header {
+    font-weight: 500;
+    margin: 10px;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    /* padding: 0; */
+    /* overflow: hidden; */
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 16px;
+    text-decoration: none;
+}
+
+.sign-out {
+    width: 100px;
+    height: 30px;
+    background-color: darkcyan;
+    color: whitesmoke;
+    margin: 0px 10px 0px 0px;
+}
+
+.location{
+    display: flex;
+    margin: 10px 0px;
+    align-items: center;
+}
+
+.icon-1 {
+    height: 20px;
+    padding-right: 20px;
+}
+
+.edit-profile {
+    display: flex;
+    align-items: center;
+    margin: 10px 0px;
+}
+
+.profile-desc {
+    margin: 10px 0px 10px;
+}
+
+.education {
+    margin: 20px 0px 20px 20px;
+    border: 4px solid gray;
+    border-radius: 5px;
+
+}
+
+.card-nav {
+    border: 2 solid yellow;
+    padding: 20px;
+    background-color: black;
+    color: white;
+    display: flex;
+
+    align-items: center;
+}
+
+.education-card{
+    margin: 20px;
+}
+
+h3,h4,p{
+    margin: 10px 0px;
+}
+
+.connection-request {
+    margin: 20px;
+    border: 4px solid slategray;
+    border-radius: 5px;
+}
+
+.connection {
+    margin:20px;
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.name {
+    display:flex;
+    align-items: center;
+}
+
+.view-more {
+    margin:0px;
+    padding:10px;
+    height: 50px;
+    display:flex;
+    align-items:center;
+    border-top: 4px solid slategray;
+}
+
+.avatar {
+    width: 40px;
+    border: 2px solid black;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.icon-2 {
+    width: 40px;
+
+}
+
+.number {
+    border-radius: 50%;
+    background-color: gray;
+    padding: 5px 10px;
+    margin-right: 10px;
+    display: inline-block;
+}
