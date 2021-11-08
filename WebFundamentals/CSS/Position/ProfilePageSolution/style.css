@@ -68,13 +68,13 @@ body {
     flex: 2;
 }
 
-.flex-container {
+/* .flex-container {
     width: 1000px;
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
-}
+} */
 
 .user-card, .card {
     width: 100%;

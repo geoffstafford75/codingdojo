@@ -1,0 +1,165 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: gainsboro;
+    font-family: 'Roboto', sans-serif;
+}
+
+.top {
+    background-color: #3d3d3d;
+}
+
+.nav {
+    max-width: 1024px;
+    margin: 0px auto;
+    display: flex;
+    background-color: #3d3d3d;
+    color: white;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 20px;
+    
+}
+
+.nav-title {
+    margin: 10px 0px;
+    font-weight: 500;
+}
+
+.nav-links {
+    display: flex;
+    list-style-type: none;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0px 0px;
+}
+
+li {
+    margin: 10px;
+}
+
+li a {
+    color: silver;
+    text-decoration: none;
+}
+
+li a:hover {
+    color:white;
+}
+
+.btn {
+    padding: 5px 10px;
+    box-shadow: 3px 3px black;
+    border-radius: 2px;
+    color: white;
+    background-color: teal;
+    border: 2px solid black;
+}
+
+.container {
+    width: 1024;
+    margin: 0 auto;
+}
+
+.row {
+    display: flex;
+    overflow: wrap;
+}
+
+.col {
+    flex: 1;
+    padding: 10px 10px;
+    margin: 10px 10px;
+}
+
+.col-2 {
+    flex: 2;
+    padding: 10px 10px;
+    margin: 10px 10px;
+}
+
+.user-card, .card{
+    width: 100%;
+    background-color: white;
+    border: 2px solid gray;
+    border-radius: 4px;
+    margin-bottom: 20px;
+    font-size: 1.2rem;
+    overflow: hidden;
+}
+
+.card-header {
+    background-color: darkturquoise;
+    height: 125px;
+    margin-bottom: 70px
+}
+
+.card-body {
+    padding: 20px;
+}
+
+.card-body h1,
+.card-body h2,
+.card-body h3,
+.card-body p {
+    margin: 20px 0px;
+}
+
+.avatar-l {
+    border-radius: 50%;
+    height: 200px;
+    padding: 5px;
+    background-color: white;
+    margin: 20px 20px
+}
+
+.icon {
+    height: 30px;
+    margin-right: 10px;
+}
+
+a {
+    color: #3a81e6;
+}
+
+.connections {
+    background-color:darkgray;
+    color: black;
+    border-radius: 12px;
+    height: 24px;
+    font-size: 20px;
+    width: 20px;
+    padding: 0px 10px;
+    margin: 0px 10px;
+}
+
+.card-title {
+    color: white;
+    background-color: #3d3d3d;
+    padding: 20px;
+    text-align: flex;
+    align-items: center;
+}
+
+.avatar-s {
+    height: 40px;
+    border-radius: 50%;
+}
+
+.connect-row {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px
+}
+
+.row-start .row-end {
+    display: flex;
+    align-items: center;
+}
+
+.dates {
+    color: grey;
+}
