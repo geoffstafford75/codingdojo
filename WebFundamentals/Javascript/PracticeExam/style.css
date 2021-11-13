@@ -1,0 +1,88 @@
+*{
+    margin:0;
+    Padding:0;
+    box-sizing:border-box;
+    border: 0.5px dotted cyan;
+    font-family: sans-serif;
+}
+
+header {
+    background-color: #222;
+    border: 2px solid gold;
+}
+
+h1 {
+    color: cyan
+}
+
+.nav-link {
+    color: lemonchiffon;
+    text-decoration: none;
+}
+
+span {
+    color: cyan;
+}
+
+ul {
+    background-color: lightgray;
+    list-style-type: none;
+    justify-content: space-between;
+}
+
+/* Main */
+
+body {
+    background-color: gray;
+}
+
+main {
+    background-color: gray;
+}
+
+h2 {
+    color: lemonchiffon;
+    margin-top:20px;
+    margin-bottom: 5px;
+}
+
+.pop-classes {
+    width: 33%;
+    border: 2px solid gold;
+    border-radius: 20px;
+    padding: 10px;
+    background-color: white;
+}
+
+.class-photo {
+    width: 100%;
+}
+
+.heart {
+    width: 30px;
+}
+
+.addperson {
+    width: 25px;
+}
+
+button {
+    background-color: cyan;
+
+}
+
+
+/* tools */
+.flex {
+    display: flex;
+    alsign-items: center;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.space-between {
+    justify-content: space-between;
+}

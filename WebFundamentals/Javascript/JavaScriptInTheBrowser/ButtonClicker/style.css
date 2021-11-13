@@ -1,0 +1,128 @@
+
+/* CSS reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+  /* Fixed width container class that will "auto-center" itself */
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+
+.row {
+    display:flex;
+}
+
+.col {
+    flex: 2;
+    margin: 10px;
+    padding: 20px;
+}
+
+.col-2 {
+    flex: 1;
+    margin: 10px;
+    padding: 20px;
+}
+
+.nav {
+    width: 80%;
+    color: white;
+    background-color: rgb(68, 69, 70);
+    display: flex;
+    align-items:center;
+    justify-content:space-between;
+    padding: 0px 20px 0px;
+    margin: 0px auto;
+    height: 60px;
+}
+
+.nav-links {
+    display:flex;
+    align-items: center;
+    list-style-type: none;
+    padding: 0px;
+    margin: 5px;
+
+}
+
+.nav-title {
+    margin: 0px;
+}
+
+.login{
+    color:white;
+    background-color: cornflowerblue;
+    height: 30px;
+    width: 100px;
+}
+
+.dictionary {
+    margin: 20px 0px;
+    padding: 20px;
+    border:2px black solid; 
+    display: flex;
+    align-items: center;
+    text-align: center
+}
+
+.col1{;
+    margin: 20px;
+}
+
+.col2{
+}
+
+.likes {
+    background-color: yellow;
+    width: 120px;
+    height: 40px;
+    box-shadow: 4px 4px black;
+}
+
+.add-definition {
+    border: 2px black solid;
+    margin: 20px 0px 20px 20px;
+    padding: 20px;
+    text-align: center;
+}
+
+.btngreen {
+    background-color:green;
+    width: 200px;
+    height: 40px;
+    box-shadow: 4px 4px black;
+}
+
+#search {
+    padding: 5px;
+    width: 250px;
+}
+
+
+/* Tools */
+.margin-0 {
+    margin: 0;
+    
+}
+
+.padding-0 {
+    padding: 0;
+}
+
+.italics {
+    font-style: italic;
+}
+
+.align-left {
+    text-align:left;
+}
+
+.margin-10 {
+    margin: 10px;
+}
