@@ -75,7 +75,7 @@ button {
 /* tools */
 .flex {
     display: flex;
-    alsign-items: center;
+    align-items: center;
 }
 
 .container {

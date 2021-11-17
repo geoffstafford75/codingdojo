@@ -2,13 +2,13 @@ console.log("page loaded...");
 
 var myVideo = document.getElementById("theVideo");
 
-function playTheDamnVideo() {
+function playTheVideo() {
     if (myVideo.paused)
         myVideo.play();
     else
         myVideo.pause();
 }
 
-function pauseTheDamnVideo() {
+function pauseTheVideo() {
         myVideo.pause();
 }
