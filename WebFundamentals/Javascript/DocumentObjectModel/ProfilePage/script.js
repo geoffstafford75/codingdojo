@@ -11,27 +11,14 @@ var newConnections = document.querySelectorAll(".new-connection");
 function accept(num) {
     
     newConnections[num].remove(); 
-    decrementNewConnectionBadge();
+    document.getElementById("new-connection-badge").innerText--;
 
-    // increment connection badge when accempting
-    var connectionBadge = document.getElementById("connection-badge");
-    var badge = connectionBadge.innerHTML;
-    badge++;
-    connectionBadge.innerHTML = badge;
-
+    // increment connection badge when accepting
+    document.getElementById("connection-badge").innerText++;
 
 }
 
 function decline(num) {
     newConnections[num].remove();
-    decrementNewConnectionBadge();
-}
-
-// Decrement New Connection Badg
-function decrementNewConnectionBadge() {
-    var newConnectionBadge = document.getElementById("new-connection-badge");
-    var badge = newConnectionBadge.innerHTML;
-    console.log(newConnectionBadge);
-    badge--;
-    newConnectionBadge.innerHTML = badge;
+    document.getElementById("new-connection-badge").innerText--;
 }
