@@ -1,12 +1,100 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Dojo Weather</title>
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    
+    <header>
+        <div class="container nav flex space-between">
+            <h1 class="flex-column">DojoWeather</h1>
+            <h2 class="flex-column">
+                <ul class="flex space-between">
+                    <li onclick="loading()">Burbank</li>
+                    <li onclick="loading()">Chicago</li>
+                    <li onclick="loading()">Dallas</li>
+                </ul>
+            </h2>
+        </div>
+    </header>
+    <main class="container">
+        <div id="city-header" class="flex">
+            <h2 class="flex-column">San Jose</h2>
+            <h5>show temperature in</h5>
+            <select name="temp-type" id="temp-type">
+                <option value="celsius">C°</option>
+                <option value="farenheit">F°</option>
+            </select>
+        </div>
+        <div class="flex space-between">
+            <div class="day-card">
+                <h2>Today</h2>
+                <img class="weather-icon" alt="some-rain" src="images/some_rain.png">
+                <p>some rain</p>
+                <br>
+                <h3>
+                    <ul class="flex space-between">
+                        <li class="red">24°</li>
+                        <li class="blue">18°</li>
+                    </ul>
+                </h3>
+            </div>
+            <div class="day-card">
+                <h2>Tomorrow</h2>
+                <img class="weather-icon" alt="some-sun" src="images/some_sun.png">
+                <p>some sun</p>
+                <br>
+                <h3>
+                    <ul class="flex space-between">
+                        <li class="red">27°</li>
+                        <li class="blue">19°</li>
+                    </ul>
+                </h3>
+            </div>
+            <div class="day-card">
+                <h2>Friday</h2>
+                <img class="weather-icon" alt="some-clouds"src="images/some_clouds.png">
+                <p>some clouds</p>
+                <br>
+                <h3>
+                    <ul class="flex space-between">
+                        <li class="red">21°</li>
+                        <li class="blue">16°</li>
+                    </ul>
+                </h3>
+            </div>
+            <div class="day-card">
+                <h2>Saturday</h2>
+                <img class="weather-icon" alt="some-sun" src="images/some_sun.png">
+                <p>some sun</p>
+                <br>
+                <h3>
+                    <ul class="flex space-between">
+                        <li class="red">26°</li>
+                        <li class="blue">21°</li>
+                    </ul>
+                </h3>
+            </div>
+        </div>
+
+        <div id="cookies" class="flex">
+            <img src="images/cookie.png" alt="cookie">
+            <div>
+                <h3>Stop! Cookie time</h3>
+                <p>We use cookies (sadly not the edible ones to personlize content
+                    and ads, to provide social media features and to analyse our traffic. <a href="#">Read more</a>
+                </p>
+            </div>
+            <button onclick="dismissCookie()">I Accept</button>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
 </body>
+
 </html>
