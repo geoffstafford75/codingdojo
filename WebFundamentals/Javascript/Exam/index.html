@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Gaming Dojo</title>
+</head>
+
+<body>
+    <!-- Nav -->
+    <header>
+        <div class="container">
+            <div class="flex space-between">
+                <h1>Gaming<span>Dojo</span></h1>
+                <div class="flex">
+                    <select name="currency" id="currency" class="margin-right-10">
+                        <option value="euro">Euro €</option>
+                        <option value="usd">USD $</option>
+                        <option value="can">CAD $</option>
+                        <option value="pesos">Pesos</option>
+                    </select>
+                    <img class="icon" src="images/cart-light.png" alt="cart" />
+                    <span id="cart" class="cart margin-right-10">0</span>
+                    <img class="icon" src="images/search-light.png" alt="search" />
+                </div>
+            </div>
+        </div>
+    </header>
+    <main class="container">
+        <div class='carosel'>
+            Highlights
+            <div class="slideshow-container">
+                <div class="mySlides">
+                    <img src="images/cafe-neko.png" />
+                </div>
+
+                <div class="mySlides">
+                    <img src="images/pixel-ninjas-2.png" />
+                </div>
+
+                <div class="mySlides">
+                    <img src="images/stonepunk.png" />
+                </div>
+
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+            </div>
+
+            <br>
+
+            <div class="align-center margin-bottom">
+                <span class="dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span>
+            </div>
+        </div>
+        <div>
+            <div class="flex space-between">
+                <div class="pop-games">
+                    <img class="game-photo" src="images/cafe-neko.png" alt="cafe-neko" />
+                    <p class="game-title margin-top">Cafe Neko: Gold Edition</p>
+                    <img onclick="message('Windows')" class="os-icon" src="images/windows.png" alt="windows" />
+                    <img onclick="message('Apple')" class="os-icon" src="images/apple.png" alt="apple" />
+                    <div class="flex space-between margin-top">
+                        <p class="game-info">-20%</p>
+                        <div>
+                            <p><s>€14.98</s></p>
+                            <p>€10.49</p>
+                        </div>
+                        <button onclick="addToCart()" class="button">Buy</button>
+                    </div>
+                </div>
+                <div class="pop-games">
+                    <img class="game-photo" src="images/pixel-ninjas-2.png" alt="pixel-ninjas" />
+                    <p class="margin-top game-title">Pixel Ninjas 2</p>
+                    <img onclick="message('Windows')" class="os-icon" src="images/windows.png" alt="windows" />
+                    <img onclick="message('Apple')" class="os-icon" src="images/apple.png" alt="apple" />
+                    <div class="flex space-between margin-top">
+                        <p class="game-info">-10%</p>
+                        <div>
+                            <p><s>€8.19</s></p>
+                            <p>€7.39</p>
+                        </div>
+                        <button onclick="addToCart()" class="button">Buy</button>
+                    </div>
+                </div>
+                <div class="pop-games">
+                    <img class="game-photo" src="images/stonepunk.png" alt="stonepunk" />
+                    <p class="game-title margin-top">Stonepunk 10000 BCE</p>
+                    <img onclick="message('Windows')" class="os-icon" src="images/windows.png" alt="windows" />
+                    <img onclick="message('Apple')" class="os-icon" src="images/apple.png" alt="apple" />
+                    <img onclick="message('Linux')" class="os-icon" src="images/linux.png" alt="linux" />
+                    <div class="flex space-between margin-top">
+                        <p class="game-info">NEW</p>
+                        <div>
+                            <p>19.99</p>
+                        </div>
+                        <button onclick="addToCart()" class="button">Buy</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="script.js"></script>
+</body>
+
+</html>
