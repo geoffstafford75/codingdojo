@@ -17,10 +17,10 @@ class User:
         print(f"User: {self.name}, Balance: {self.account_balance}")
     # transfer
     def transfer_money(self, other_user, amount):
-        self.account_balance -= amount
+        self.make_withdrawal(amount)
         other_user.make_deposit(amount)
-        print(f"User: {self.name}, Balance: {self.account_balance}")
-        print(f"User: {other_user.name}, Balance: {other_user.account_balance}")
+        self.display_user_balance()
+        other_user.display_user_balance()
     
 
 
