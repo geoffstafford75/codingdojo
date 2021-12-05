@@ -23,8 +23,6 @@ class User:
         other_user.display_user_balance()
     
 
-
-
 guido = User("Guido van Rossum", "guido@python.com")
 monty = User("Monty Python", "monty@python.com")
 limp = User("Limp Bizkit", "limp@python.com")
