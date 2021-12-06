@@ -6,21 +6,23 @@ class BankAccount:
         self.int_rate = int_rate
         self.balance = balance
         BankAccount.all_accounts.append(self)
+
     def deposit(self, amount):
         self.balance += amount
         return self
+
     def withdraw(self, amount):
-        # we can use the static method here to evaluate
-        # if we can with draw the funds without going negative
         if BankAccount.can_withdraw(self.balance,amount):
             self.balance -= amount
         else:
             print("Insufficient Funds: Charging a $5 fee")
             self.balance -=5
         return self
+
     def display_account_info(self):
         print(f"Balance: ${self.balance}")
         return self
+
     def yield_interest(self):
         if self.balance > 0:
             self.balance += self.balance * self.int_rate
@@ -30,7 +32,8 @@ class BankAccount:
     @classmethod
     def change_bank_name(cls,name):
         cls.bank_name = name
-    # class method to get balance of all accounts
+
+    # class method to get balances of all accounts
     @classmethod
     def all_balances(cls):
         sum = 0
@@ -38,6 +41,7 @@ class BankAccount:
         for account in cls.all_accounts:
             account.display_account_info()
         return sum
+
     # static method have no access to any attribute only to what is passed into it
     @staticmethod
     def can_withdraw(balance, amount):
