@@ -3,10 +3,10 @@ class User:
         self.name = name
         self.email = email
         self.account_balance = 0
-    # deposit method
-    def make_deposit(self, amount):	# takes an argument that is the amount of the deposit
-        self.account_balance += amount	# the specific user's account increases by the amount of the value received
-    # withdrawal method
+
+    def make_deposit(self, amount):
+        self.account_balance += amount	
+        
     def make_withdrawal(self,amount): # takes an argument that is the amount to withdraw
         if self.account_balance - amount >= 0: # Only decrement account if result is greater than 0
             self.account_balance -= amount # the specific user's account decremented by the amount of the value received
