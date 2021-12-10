@@ -38,4 +38,4 @@ checking = BankAccount(.02,5000)
 savings.deposit(10).deposit(20).deposit(40).withdraw(600).yeild_interest().display_account_info()
 checking.deposit(100).deposit(200).deposit(400).withdraw(60).yeild_interest().display_account_info()
 
-BankAccount.print_all_accounts()
+BankAccount.print_all_accounts()dd
