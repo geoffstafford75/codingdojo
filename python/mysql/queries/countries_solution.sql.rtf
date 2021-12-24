@@ -1,0 +1,55 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2636
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fnil\fcharset0 Menlo-Regular;}
+{\colortbl;\red255\green255\blue255;\red255\green255\blue255;\red15\green15\blue15;\red244\green0\blue95;
+\red224\green213\blue97;\red88\green209\blue235;\red157\green101\blue255;}
+{\*\expandedcolortbl;;\cssrgb\c100000\c100000\c100000;\cssrgb\c7059\c7059\c7059;\cssrgb\c97647\c14902\c44706;
+\cssrgb\c90196\c85882\c45490;\cssrgb\c40000\c85098\c93725;\cssrgb\c68235\c50588\c100000;}
+\margl1440\margr1440\vieww11520\viewh8400\viewkind0
+\deftab720
+\pard\pardeftab720\partightenfactor0
+
+\f0\fs28 \cf2 \cb3 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 SELECT countries.name \cf4 \strokec4 as\cf2 \strokec2  name, languages.language \cf4 \strokec4 as\cf2 \strokec2  language, languages.percentage \cf4 \strokec4 as\cf2 \strokec2  percentage FROM countries\
+JOIN languages ON countries.id \cf4 \strokec4 =\cf2 \strokec2  languages.country_id\
+WHERE languages.language \cf4 \strokec4 =\cf2 \strokec2  \cf5 \strokec5 "Slovene"\cf2 \strokec2 \
+ORDER BY languages.percentage DESC;\
+\
+SELECT countries.name \cf4 \strokec4 as\cf2 \strokec2  name, \cf6 \strokec6 COUNT\cf2 \strokec2 (cities.name) \cf4 \strokec4 as\cf2 \strokec2  cities\
+FROM countries\
+LEFT JOIN cities ON countries.id \cf4 \strokec4 =\cf2 \strokec2  cities.country_id\
+GROUP BY countries.name\
+ORDER BY cities DESC;\
+\
+SELECT  name , population, country_id FROM cities\
+WHERE cities.population \cf4 \strokec4 >\cf2 \strokec2  \cf7 \strokec7 500000\cf2 \strokec2 \
+\pard\pardeftab720\partightenfactor0
+\cf4 \strokec4 AND\cf2 \strokec2  cities.country_id \cf4 \strokec4 =\cf2 \strokec2  ( SELECT id FROM countries WHERE countries.name \cf4 \strokec4 =\cf2 \strokec2  \cf5 \strokec5 "Mexico"\cf2 \strokec2  )\
+ORDER BY population DESC;\
+\
+SELECT countries.name \cf4 \strokec4 as\cf2 \strokec2  name, languages.language \cf4 \strokec4 as\cf2 \strokec2  language, languages.percentage \cf4 \strokec4 as\cf2 \strokec2  percentage FROM countries\
+JOIN languages ON countries.id \cf4 \strokec4 =\cf2 \strokec2  languages.country_id\
+WHERE languages.percentage \cf4 \strokec4 >\cf2 \strokec2  \cf7 \strokec7 89\cf2 \strokec2 \
+ORDER BY languages.percentage DESC;\
+\
+\
+SELECT name, surface_area, population from countries\
+WHERE surface_area \cf4 \strokec4 <\cf2 \strokec2  \cf7 \strokec7 501\cf2 \strokec2 \
+\cf4 \strokec4 AND\cf2 \strokec2  population \cf4 \strokec4 >\cf7 \strokec7 100000\cf2 \strokec2 ;\
+\
+SELECT name, government_form,capital, life_expectancy from countries\
+WHERE capital \cf4 \strokec4 >\cf2 \strokec2  \cf7 \strokec7 200\cf2 \strokec2 \
+\cf4 \strokec4 AND\cf2 \strokec2  government_form \cf4 \strokec4 =\cf5 \strokec5 "Constitutional Monarchy"\cf2 \strokec2 \
+\cf4 \strokec4 AND\cf2 \strokec2  life_expectancy \cf4 \strokec4 >\cf2 \strokec2  \cf7 \strokec7 75\cf2 \strokec2 ;\
+\
+\
+SELECT countries.name \cf4 \strokec4 as\cf2 \strokec2  country_name, cities.name \cf4 \strokec4 as\cf2 \strokec2  city_name, cities.district, cities.population from countries\
+JOIN cities ON countries.id \cf4 \strokec4 =\cf2 \strokec2  cities.country_id\
+WHERE cities.district \cf4 \strokec4 =\cf2 \strokec2  \cf5 \strokec5 "Buenos Aires"\cf2 \strokec2 \
+\cf4 \strokec4 AND\cf2 \strokec2  cities.population \cf4 \strokec4 >\cf2 \strokec2  \cf7 \strokec7 500000\cf2 \strokec2 \
+ORDER BY cities.population DESC;\
+\
+SELECT countries.region, \cf6 \strokec6 COUNT\cf2 \strokec2 (countries.name) \cf4 \strokec4 as\cf2 \strokec2  countries\
+FROM countries\
+GROUP BY countries.region\
+ORDER BY countries DESC\
+}
