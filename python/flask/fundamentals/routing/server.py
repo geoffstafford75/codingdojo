@@ -9,17 +9,21 @@ def hello_world():
 def success():
     return "Dojo!"
 
-@app.route('/say/<name>')
+@app.route('/say/<string:name>')
 def hello(name):
     print(name)
     return f"Hi, {name.capitalize()}!"
 
-@app.route('/repeat/<int:number>/<word>')
+@app.route('/repeat/<int:number>/<string:word>')
 def repeat(number,word):
     output = ""
     for x in range(int(number)):
         output += f"<p>{word}</p>"
     return output
+
+@app.errorhandler(404)
+def page_not_found(e):
+    return "Sorry! No response. Try again."
 
 if __name__=="__main__":   # Ensure this file is being run directly and not from a different module    
     app.run(debug=True)    # Run the app in debug mode.
