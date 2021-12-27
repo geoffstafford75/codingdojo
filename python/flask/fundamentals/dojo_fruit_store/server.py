@@ -10,6 +10,8 @@ def index():
 def checkout():
     print(request.form)
     numitems = int(request.form['strawberry']) + int(request.form['raspberry']) + int(request.form['apple'])
+    name = request.form['first_name']
+    print(f"Charging {name} for {numitems} fruits")
     return render_template("checkout.html",numitems=numitems,raspberry=int(request.form['raspberry']),strawberry=int(request.form['strawberry']),apple=int(request.form['apple']),first_name=request.form['first_name'],last_name=request.form['last_name'],student_id=request.form['student_id'], date=datetime.now().strftime("%B %-d, %Y, %-I:%-M:%-S %p"))
 
 @app.route('/fruits')         
