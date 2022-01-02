@@ -8,20 +8,21 @@ app.secret_key = 'keep it secret, keep it safe' # set a secret key for security 
 def index():
     return render_template("index.html")
 
-@app.route('/users', methods=['POST'])
-def create_user():
-    print("Got Post Info")
-    # Here we add two properties to session to store the name and email
-    session['username'] = request.form['name']
-    session['useremail'] = request.form['email']
-    return redirect('/show')
+@app.route('/process', methods=['POST'])
+def process():
+    
+    session['name'] = request.form['name']
+    session['locaation'] = request.form['location']
+    session['language'] = request.form['language']
+    session['comment'] = request.form['comment']
+    print(session)
+    return redirect('/result')
 
     
 # adding this method
-@app.route('/show')
+@app.route('/result')
 def show_user():
-    return render_template('show.html')
-
+    return render_template('result.html')
 
 if __name__ == "__main__":
     app.run(debug=True)
