@@ -1,0 +1,20 @@
+Incorrect Password
+pymysql.err.OperationalError: (1045, "Access denied for user 'root'@'localhost' (using password: YES)")
+
+Remove to lower in select find
+TypeError: 'NoneType' object is not iterable
+
+Change mogrify to mogrify: query = cursor.morify(query, data)
+TypeError: 'bool' object is not iterable
+
+Change execute to executed cursor.executed(query, data)
+TypeError: 'bool' object is not iterable
+
+Incorrect user name
+pymysql.err.OperationalError: (1045, "Access denied for user 'roots'@'localhost' (using password: YES)")
+
+Change server name
+pymysql.err.OperationalError: (2003, "Can't connect to MySQL server on 'server' ([Errno 8] nodename nor servname provided, or not known)")
+
+Change encoding
+AttributeError: 'NoneType' object has no attribute 'encoding'
