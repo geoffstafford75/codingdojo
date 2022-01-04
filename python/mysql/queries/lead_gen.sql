@@ -13,5 +13,13 @@ group by client_id;
 select domain_name as website, client_id from sites
 where client_id = 10;
 
-select sites.client_id, count(sites.site_id) as number_of_websites from sites
-group by client_id
+select sites.client_id, count(sites.site_id) as number_of_websites, monthname(str_to_date(month(sites.created_datetime), '%m')) as month_created, year(sites.created_datetime) as year from sites
+where client_id = 1
+group by month_created, year;
+
+select sites.client_id, count(sites.site_id) as number_of_websites, monthname(str_to_date(month(sites.created_datetime), '%m')) as month_created, year(sites.created_datetime) as year from sites
+where client_id = 20
+group by month_created, year;
+
+where client_id = 1
+
