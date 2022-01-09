@@ -2,15 +2,20 @@ from flask import Flask, render_template, request, redirect, session
 # import the class from friend.py
 from user import User
 app = Flask(__name__)
+
+@app.route('/')
+def index():
+    return redirect("users")
+
 @app.route('/users')
-def all_users():
+def users():
     users = User.get_all()
     print(users)
-    return render_template("read.html", users = users)
+    return render_template("users.html", users = users)
 
 @app.route('/users/new')
 def user_form():
-    return render_template("create.html")
+    return render_template("new.html")
 
 @app.route('/users/create_user', methods=["POST"])
 def create_user():
@@ -25,6 +30,34 @@ def create_user():
     User.save(data)
     # Don't forget to redirect after saving to the database.
     return redirect('/users')
+
+@app.route('/users/update', methods=["POST"])
+def update_user():
+    print(request.form)
+    User.update(request.form)
+    return redirect("/users/show/6")
+
+@app.route('/users/edit/<int:id>')
+def edit_user(id):
+    data = {
+        "id": id
+    }
+    return render_template("edit.html",user = User.get_one(data))
+
+@app.route('/users/show/<int:id>')
+def show_user(id):
+    data = {
+        "id": id
+    }
+    return render_template("user.html",user = User.get_one(data))
+
+@app.route('/users/delete/<int:id>')
+def delete_user(id):
+    data = {
+        "id": id
+    }
+    User.delete(data)
+    return redirect("/users")
             
 if __name__ == "__main__":
     app.run(debug=True)
