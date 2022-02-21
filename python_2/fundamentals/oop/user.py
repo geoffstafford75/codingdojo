@@ -1,14 +1,15 @@
-;class User:
+class User:		# here's what we have so far
     def __init__(self, name, email):
         self.name = name
         self.email = email
         self.account_balance = 0
-    def make_deposit(self, amount):
-        self.account_balance += amount	
-        
-    def make_withdrawal(self,amount): # takes an argument that is the amount to withdraw
-        if self.account_balance - amount >= 0: # Only decrement account if result is greater than 0
-            self.account_balance -= amount # the specific user's account decremented by the amount of the value received
+    # adding the deposit method
+    def make_deposit(self, amount):	# takes an argument that is the amount of the deposit
+    	self.account_balance += amount	# the specific user's account increases by the amount of the value received
+    # withdrawal method
+    def make_withdrawal(self, amount): # takes an argument that is the amount of the withdrawal
+        if self.account_balance - amount >=0:
+            self.account_balance -= amount
         else:
             print(f"Cannot withdraw {amount} from account with balance {self.account_blance}.")
     # display balance
@@ -20,7 +21,6 @@
         other_user.make_deposit(amount)
         self.display_user_balance()
         other_user.display_user_balance()
-    
 
 guido = User("Guido van Rossum", "guido@python.com")
 monty = User("Monty Python", "monty@python.com")
@@ -48,7 +48,3 @@ limp.make_withdrawal(200)
 limp.display_user_balance() # 300 Balance
 
 guido.transfer_money(limp,299)
-
-
-
-
