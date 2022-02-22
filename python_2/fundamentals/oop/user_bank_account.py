@@ -47,7 +47,7 @@ class BankAccount:
             return True
 
 
-class User:
+class User:		# here's what we have so far
     def __init__(self, name, email):
         self.name = name
         self.email = email
@@ -55,29 +55,27 @@ class User:
             "Checking" : BankAccount(.02, 0),
             "Savings" : BankAccount(.05, 0)
         }
-    
-    def make_deposit(self, name, amount):
-        print(name)
-        self.account[name].deposit(amount)
+    # adding the deposit method
+    def make_deposit(self, name, amount):	# takes an argument that is the amount of the deposit
+        self.account[name].balance += amount	# the specific user's account increases by the amount of the value received
         return self
-        
-    def make_withdrawal(self, name, amount): 
-        self.account[name].withdraw(amount)
+    # withdrawal method
+    def make_withdrawal(self, name, amount): # takes an argument that is the amount of the withdrawal
+        self.account[name].balance -= amount
         return self
-
+    # display balance
     def display_user_balance(self):
         print(f"User: {self.name}, Checking Balance: {self.account['Checking'].display_account_info()}")
         print(f"User: {self.name}, Savings Balance: {self.account['Savings'].display_account_info()}")
         return self
-
-    def transfer_money(self, other_user, amount):
-        self.make_withdrawal(amount)
-        other_user.make_deposit(amount)
+    # transfer money
+    def transfer_money(self, other_user, name, amount):
+        self.make_withdrawal(name,amount)
+        other_user.make_deposit(name,amount)
         self.display_user_balance()
         other_user.display_user_balance()
         return self
 
 guido = User("Guido Sarduchi", "guido@python.com")
-guido.make_deposit("Checking",5000)
-guido.display_user_balance()
+guido.make_deposit("Checking",5000).display_user_balance()
 
